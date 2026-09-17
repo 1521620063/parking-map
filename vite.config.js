@@ -3,6 +3,7 @@ import vue from '@vitejs/plugin-vue'
 import { viteObfuscateFile } from 'vite-plugin-obfuscator'
 
 export default defineConfig({
+  base: '/parking-map/',
   plugins: [
     vue(),
     viteObfuscateFile({
