@@ -479,6 +479,7 @@ export const PARKING_POINTS = [
     fallback: [120.256514, 30.138513],
     type: 2,
   },
+
   {
     name: "萧杭路（博奥路-金山路）临时停车场",
     address: "杭州市萧山区萧杭路博奥路至金山路段临时停车场",
