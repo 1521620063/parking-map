@@ -104,6 +104,12 @@ export const PARKING_POINTS = [
     type: 1,
   },
   {
+    name: "城博里",
+    address: "杭州市萧山区北干街道金惠路275-277号",
+    fallback: [120.267645, 30.187399],
+    type: 1,
+  },
+  {
     name: "萧山区朝晖小学停车场",
     address: "杭州市萧山区晨晖路朝晖小学",
     fallback: [120.254371, 30.137481],

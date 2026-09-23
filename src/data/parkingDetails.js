@@ -96,6 +96,12 @@ export const PARKING_DETAILS = {
     sale: ["450 元/月"],
     note: "长停200-250、次卡25-30",
   },
+  城博里: {
+    district: "萧山区",
+    cost: ["100 元/月"],
+    sale: ["200 元/月"],
+    note: "发帖子不要带龙王庙，发城博里附件",
+  },
   金山小学内部地下停车场: {
     district: "萧山区",
     cost: ["240 元/月"],
