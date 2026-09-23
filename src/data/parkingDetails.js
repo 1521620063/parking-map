@@ -73,10 +73,6 @@ export const PARKING_DETAILS = {
   东方至尊: { cost: [], sale: [] },
   英冠水天成: { cost: [], sale: [] },
   微医绿谷: { cost: [], sale: [] },
-  江南时代广场: {
-    cost: ["400 元/月", "半年 900 元（300/月）", "员工季 900 元（300/月）"],
-    sale: [],
-  },
   "双桥(地铁站)": {
     district: "萧山区",
     cost: ["0"],

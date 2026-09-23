@@ -80,12 +80,6 @@ export const PARKING_POINTS = [
     type: 1,
   },
   {
-    name: "江南时代广场",
-    address: "杭州市余杭区余杭街道荆余路1号",
-    fallback: [119.950814, 30.259277],
-    type: 1,
-  },
-  {
     name: "双桥(地铁站)",
     address: "杭州市萧山区双桥地铁站",
     fallback: [120.30877, 30.173139],
