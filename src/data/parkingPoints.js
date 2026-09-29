@@ -110,6 +110,12 @@ export const PARKING_POINTS = [
     type: 1,
   },
   {
+    name: "智慧谷二期",
+    address: "杭州市萧山区盈丰街道济仁路(丰东花苑西北侧)",
+    fallback: [120.261719, 30.219798],
+    type: 1,
+  },
+  {
     name: "萧山区朝晖小学停车场",
     address: "杭州市萧山区晨晖路朝晖小学",
     fallback: [120.254371, 30.137481],
