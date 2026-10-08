@@ -17,7 +17,6 @@ export const PARKING_POINTS = [
     fallback: [120.253961, 30.235017],
     type: 1,
   },
-
   {
     name: "城北.尚博苑1区",
     address: "杭州市萧山区博学路1010东北方向180米",
@@ -40,6 +39,24 @@ export const PARKING_POINTS = [
     name: "钱江世纪公园",
     address: "杭州市萧山区钱江世纪公园",
     fallback: [120.237194, 30.244685],
+    type: 1,
+  },
+  {
+    name: "海外海杭州杭州汽车城",
+    address: "杭州市拱墅区石详路589号",
+    fallback: [120.124633, 30.329927],
+    type: 1,
+  },
+  {
+    name: "塘湾名苑",
+    address: "浙江省杭州市萧山区博学路1300号",
+    fallback: [120.287064, 30.192354],
+    type: 1,
+  },
+  {
+    name: "甬江嘉院",
+    address: "杭州市上城区海潮路海潮雅园一园西南侧约120米",
+    fallback: [120.180503, 30.231016],
     type: 1,
   },
   {
