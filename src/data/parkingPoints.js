@@ -44,7 +44,7 @@ export const PARKING_POINTS = [
   {
     name: "海外海杭州杭州汽车城",
     address: "杭州市拱墅区石详路589号",
-    fallback: [120.124633, 30.329927],
+    fallback: [120.118698, 30.324495],
     type: 1,
   },
   {
@@ -65,12 +65,12 @@ export const PARKING_POINTS = [
     fallback: [120.189901, 30.242416],
     type: 1,
   },
-  {
-    name: "皋塘运都",
-    address: "杭州市上城区新风路",
-    fallback: [120.213282, 30.281788],
-    type: 1,
-  },
+  // {
+  //   name: "皋塘运都",
+  //   address: "杭州市上城区新风路",
+  //   fallback: [120.213282, 30.281788],
+  //   type: 1,
+  // },
   {
     name: "九阳创意工业园",
     address: "杭州市钱塘区银海街760号",
@@ -96,12 +96,12 @@ export const PARKING_POINTS = [
     fallback: [120.252995, 30.207244],
     type: 1,
   },
-  {
-    name: "双桥(地铁站)",
-    address: "杭州市萧山区双桥地铁站",
-    fallback: [120.30877, 30.173139],
-    type: 1,
-  },
+  // {
+  //   name: "双桥(地铁站)",
+  //   address: "杭州市萧山区双桥地铁站",
+  //   fallback: [120.30877, 30.173139],
+  //   type: 1,
+  // },
   {
     name: "祥生中心",
     address: "同协路与天城路交叉口(明石路地铁站C1口步行310米)",
@@ -130,6 +130,12 @@ export const PARKING_POINTS = [
     name: "智慧谷二期",
     address: "杭州市萧山区盈丰街道济仁路(丰东花苑西北侧)",
     fallback: [120.261719, 30.219798],
+    type: 1,
+  },
+  {
+    name: "星辉时光城",
+    address: "杭州市萧山区萧绍东路168号",
+    fallback: [120.321954, 30.170137],
     type: 1,
   },
   {
