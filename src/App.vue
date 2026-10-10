@@ -5,13 +5,37 @@ import { PARKING_DETAILS } from "./data/parkingDetails.js";
 
 const AMAP_KEY = "b2839d2e087e1de306b56506ab2179bf";
 const AUTH_STORAGE_KEY = "parking-map-authenticated";
+const AUTH_DURATION_MS = 7 * 24 * 60 * 60 * 1000;
 const LOGIN_USERNAME = "admin";
 const LOGIN_PASSWORD = "mszb@2026!";
 
-const isAuthenticated = ref(
-  typeof window !== "undefined" &&
-    window.sessionStorage.getItem(AUTH_STORAGE_KEY) === "true"
-);
+function clearStoredAuth() {
+  if (typeof window === "undefined") return;
+  window.localStorage.removeItem(AUTH_STORAGE_KEY);
+}
+
+function getStoredAuth() {
+  if (typeof window === "undefined") return false;
+  try {
+    const raw = window.localStorage.getItem(AUTH_STORAGE_KEY);
+    if (!raw) return false;
+    const auth = JSON.parse(raw);
+    if (auth?.expiresAt && Date.now() < auth.expiresAt) return true;
+  } catch (error) {
+    console.warn("登录状态读取失败：", error);
+  }
+  clearStoredAuth();
+  return false;
+}
+
+function storeAuth() {
+  window.localStorage.setItem(
+    AUTH_STORAGE_KEY,
+    JSON.stringify({ expiresAt: Date.now() + AUTH_DURATION_MS })
+  );
+}
+
+const isAuthenticated = ref(getStoredAuth());
 const loginForm = reactive({
   username: "",
   password: "",
@@ -320,7 +344,7 @@ function handleLogin() {
   if (username === LOGIN_USERNAME && loginForm.password === LOGIN_PASSWORD) {
     loginError.value = "";
     isAuthenticated.value = true;
-    window.sessionStorage.setItem(AUTH_STORAGE_KEY, "true");
+    storeAuth();
     nextTick(initMap);
     return;
   }
@@ -329,7 +353,7 @@ function handleLogin() {
 }
 
 function handleLogout() {
-  window.sessionStorage.removeItem(AUTH_STORAGE_KEY);
+  clearStoredAuth();
   isAuthenticated.value = false;
   loginForm.password = "";
   destroyMap();
