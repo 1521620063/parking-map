@@ -530,8 +530,6 @@ onBeforeUnmount(() => {
           <h2>{{ detail.name }}</h2>
           <div class="detail-address">{{ detail.address }}</div>
           <dl>
-            <dt>区域</dt>
-            <dd>{{ detail.district }}</dd>
             <dt>成本</dt>
             <dd>
               <div v-for="item in detail.cost" :key="item">{{ item }}</div>
@@ -544,7 +542,7 @@ onBeforeUnmount(() => {
             </dd>
             <dt>备注</dt>
             <dd>
-              <span v-if="detail.note">{{ detail.note }}</span>
+              <span v-if="detail.note" v-html="detail.note"></span>
               <span v-else class="muted">暂无备注</span>
             </dd>
           </dl>
