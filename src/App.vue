@@ -5,9 +5,9 @@ import { PARKING_DETAILS } from "./data/parkingDetails.js";
 
 const AMAP_KEY = "b2839d2e087e1de306b56506ab2179bf";
 const AUTH_STORAGE_KEY = "parking-map-authenticated";
-const AUTH_DURATION_MS = 7 * 24 * 60 * 60 * 1000;
+const AUTH_DURATION_MS = 30 * 24 * 60 * 60 * 1000;
 const LOGIN_USERNAME = "admin";
-const LOGIN_PASSWORD = "mszb@2026!";
+const LOGIN_PASSWORD = "mszb2026";
 
 function clearStoredAuth() {
   if (typeof window === "undefined") return;
